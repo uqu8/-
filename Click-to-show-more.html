@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script type='text/javascript' src='/jquery.min.js' ></script>
+    <script type="text/javascript">
+        // JavaScript Document
+        $(document).ready(function(){
+            $('.show-more .show-more__trigger').click(function(){
+                $(this).toggleClass('visible');
+                $(this).siblings().toggleClass('visible');
+            });
+            $('.show-more01 .show-more__trigger01').click(function(){
+                $(this).toggleClass('visible');
+                $(this).siblings().toggleClass('visible');
+            });
+        });
+        //End body class
+    </script>
+    <style>
+        .show-more {
+          display: block;
+          width: 100%;
+        }
+        .show-more .show-more__trigger {
+          cursor: pointer;
+          color: #fb6d4c;
+        }
+        .show-more .closebox{
+            display: none;
+        }
+        .show-more .showbox{
+            display: block;
+        }
+
+        .show-more .visible .closebox{
+            display: block;
+        }
+        .show-more .visible .showbox{
+            display: none;
+        }
+
+        .show-more .show-more01 .closebox{
+            display: none;
+        }
+        .show-more .show-more01 .showbox{
+            display: block;
+        }
+
+        .show-more .show-more01 .visible .closebox{
+            display: block;
+        }
+        .show-more .show-more01 .visible .showbox{
+            display: none;
+        }
+
+
+
+        .show-more .show-more__reveal {
+          max-height: 0;
+          opacity: 0;
+          padding-top: 10px;
+          transition: all 0.6s ease-in-out;
+          visibility: hidden;
+        }
+        .show-more .show-more__reveal.visible {
+          max-height: 99rem;
+          opacity: 1;
+          visibility: visible;
+        }
+    </style>
+    
+</head>
+<body>
+<div class="show-more">
+    <div class="show-more__reveal">
+        <p>Today, enterprises must be able to consistently market, advertise, sell, and support online across smartphones, tablets, social networks, and a growing number of Internet of things (IoTs).  This is why innovations in translation technology that deliver multichannel and agile translation services when and where customers need them are critical factors for global business success. Professionals rely on networks such as websites, social media, call centers, and live on-site interpretation to perform a growing number of business related tasks. Modern translation solutions that are dynamic, real time, and rendered on all devices are not only possible—they are increasingly a must.</p>
+
+<div class="show-more01">
+    <div class="show-more__reveal">
+        <p>test</p>
+    </div>
+    <div class="show-more__trigger"><span class="showbox">Read More</span><span class="closebox">Read Less</div>
+</div>
+        <p>Designed for the digital economy, Stepes disrupts traditional static localization models so multinational enterprises can penetrate into global markets more quickly and efficiently.</p>
+    </div>
+    <div class="show-more__trigger"><span class="showbox">Read More</span><span class="closebox">Read Less</div>
+</div>
+</body>
+</html>
